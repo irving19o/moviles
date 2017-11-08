@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*- 
 from PIL import Image, ImageDraw, ImageFont
 from flask import Flask, send_file, request, jsonify
 from flask_restful import reqparse, abort, Api, Resource, url_for
