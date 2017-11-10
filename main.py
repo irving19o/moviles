@@ -15,12 +15,14 @@ class Movimiento(Resource):
     def get(self):
         #distancias que envía el sensor ultrasónico
         frente = request.args.get('frente')
+	inicio = request.args.get('inicio')
         derecha = request.args.get('derecha')
         izquierda = request.args.get('izquierda')
         atras = request.args.get('atras')
         foo =["izquerda", "derecha", "frente"]
         return {"avazar": {random.choice(foo): "50"},
-                "imagen": "https://pruebamoodle.ga/derecha="+derecha+"&izquierda="+izquierda+"&frente="+frente+"&atras=100"
+		"inicio": inicio, 
+                "imagen": "https://pruebamoodle.ga/imagen?derecha="+derecha+"&izquierda="+izquierda+"&frente="+frente
     }
 
 
